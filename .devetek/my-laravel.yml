@@ -1,0 +1,22 @@
+# Cloud Devetek Standard Definition v0.0.1-alpha.0 Go Example
+version: v0.0.1-alpha.0
+
+setup:
+  language:
+    name: php
+    version: 8.2
+
+build:
+  target:
+    ## -> Build app non docker (tar.gz)
+    machine: # exec sequentially
+      workdir: .
+      steps:
+        - name: "Build laravel application"
+          cmd:
+            - composer install
+
+run:
+  name: my-laravel-app
+  description: My first laravel example deploy from cloud.terpusat.com
+  command: php artisan octane:start
