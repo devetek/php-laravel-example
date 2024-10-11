@@ -15,6 +15,7 @@ build:
         - name: "Build laravel application"
           cmd:
             - composer install
+            - cp .env.example .env
 
 run:
   name: my-laravel-app
