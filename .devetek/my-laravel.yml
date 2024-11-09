@@ -22,12 +22,12 @@ build:
             - cp .env.example .env # create config from example
 
             # install dependencies
-            - php artisan key:generate | echo "APP_KEY already exist"
             - composer install --optimize-autoloader --no-dev
             - php artisan migrate
             - php artisan storage:link | echo "storage:link alrady exist"
 
             # re-create cache
+            - php artisan key:generate | echo "APP_KEY already exist"
             - php artisan optimize
 
 run:
