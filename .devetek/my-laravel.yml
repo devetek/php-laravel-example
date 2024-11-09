@@ -15,7 +15,7 @@ build:
         - name: "Build laravel application"
           cmd:
             # clear previous cache
-            - php artisan optimize:clear
+            - php artisan optimize:clear | echo "No cache need to clear"
 
             # create configuration
             - touch database.db # create sqllite database
