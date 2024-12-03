@@ -34,3 +34,4 @@ run:
   name: my-laravel-app
   description: My first laravel example deploy from cloud.terpusat.com
   command: php artisan octane:start
+  port: 8000
